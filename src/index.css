@@ -14,3 +14,15 @@ body {
   width: 100vw;
   height: 100vh;
 }
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px 12px !important;
+  }
+}

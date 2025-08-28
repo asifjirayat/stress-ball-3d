@@ -1,8 +1,8 @@
 import { useFrame } from "@react-three/fiber";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, memo } from "react";
 import { StressBallMaterial, materialTypes } from "./StressBallMaterials.jsx";
 
-const Scene = ({ currentMaterial }) => {
+const Scene = memo(function ({ currentMaterial }) {
   const mesh = useRef(null);
   const [isPressed, setIsPressed] = useState(false);
   const [particles, setParticles] = useState([]);
@@ -105,6 +105,6 @@ const Scene = ({ currentMaterial }) => {
       ))}
     </>
   );
-};
+});
 
 export default Scene;
